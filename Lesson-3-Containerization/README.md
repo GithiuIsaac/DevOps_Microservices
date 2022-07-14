@@ -311,8 +311,20 @@ The URL for the project build is here:  https://circleci.com/gh/noahgift/pai-aws
 
 https://circleci.com/gh/noahgift/pai-aws/24#artifacts/containers/0
 
+Test the app functionality using the Swagger API:
+`curl -X GET "http://localhost:8000/api/funcs" -H "accept: application/json"`
 
-
+The expected response should be:
+```
+{
+  "funcs": [
+    "npmedian", 
+    "npsum", 
+    "numpy", 
+    "tanimoto"
+  ]
+}
+```
 
 
 
